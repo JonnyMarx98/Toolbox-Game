@@ -1,0 +1,781 @@
+﻿Log file open, 02/01/17 22:03:36
+LogInit:Display: Running engine for game: PickupInterface
+LogPlatformFile: Not using cached read wrapper
+LogInit:Display: RandInit(288123020) SRandInit(288123024).
+LogTaskGraph: Started task graph with 4 named threads and 5 total threads with 1 sets of task threads.
+LogStats: Stats thread started at 0.037240
+LogInit: Version: 4.12.5-0+UE4
+LogInit: API Version: 0
+LogInit: Net Version: 0
+LogDevObjectVersion: Number of dev versions registered: 13
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 3
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 1
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 2
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 6
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 0
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 2
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 0
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 0
+LogInit: Compiled (64-bit): Jan 28 2017 13:49:53
+LogInit: Compiled with Clang: 3.8.0 (tags/RELEASE_380/final)
+LogInit: Build Configuration: Development
+LogInit: Branch Name: UE4
+LogInit: Command line: 
+LogInit: Base directory: /home/bm199305/Git/UnrealEngine/Engine/Binaries/Linux/
+LogInit: Installed Engine Build: 0
+LogInit: Using libcurl 7.46.0
+LogInit:  - built for x86_64-pc-linux-gnu
+LogInit:  - supports SSL with OpenSSL/1.0.2d
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.5
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_TLSAUTH_SRP
+LogInit:  Libcurl: checking if '/etc/pki/tls/certs/ca-bundle.crt' exists
+LogInit:  Libcurl: checking if '/etc/ssl/certs/ca-certificates.crt' exists
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = true  - Libcurl will verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = /etc/ssl/certs/ca-certificates.crt  - Libcurl will set CURLOPT_CAINFO to it
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2017.02.01-22.03.36:717][  0]LogInit: Initializing SDL.
+[2017.02.01-22.03.37:184][  0]LogInit: Initialized SDL 2.0.4 (compiled against 2.0.4)
+[2017.02.01-22.03.37:185][  0]LogInit: Display metrics:
+[2017.02.01-22.03.37:185][  0]LogInit:   PrimaryDisplayWidth: 1920
+[2017.02.01-22.03.37:185][  0]LogInit:   PrimaryDisplayHeight: 1080
+[2017.02.01-22.03.37:185][  0]LogInit:   PrimaryDisplayWorkAreaRect:
+[2017.02.01-22.03.37:185][  0]LogInit:     Left=65, Top=24, Right=1920, Bottom=1080
+[2017.02.01-22.03.37:185][  0]LogInit:   VirtualDisplayRect:
+[2017.02.01-22.03.37:185][  0]LogInit:     Left=65, Top=24, Right=1920, Bottom=1080
+[2017.02.01-22.03.37:185][  0]LogInit:   TitleSafePaddingSize: X=0.000 Y=0.000
+[2017.02.01-22.03.37:185][  0]LogInit:   ActionSafePaddingSize: X=0.000 Y=0.000
+[2017.02.01-22.03.37:185][  0]LogInit:   Number of monitors: 1
+[2017.02.01-22.03.37:185][  0]LogInit:     Monitor 0
+[2017.02.01-22.03.37:185][  0]LogInit:       Name: 0
+[2017.02.01-22.03.37:185][  0]LogInit:       ID: display0
+[2017.02.01-22.03.37:185][  0]LogInit:       NativeWidth: 1920
+[2017.02.01-22.03.37:185][  0]LogInit:       NativeHeight: 1080
+[2017.02.01-22.03.37:185][  0]LogInit:       bIsPrimary: true
+[2017.02.01-22.03.37:186][  0]LogLinux: Selected Device Profile: [Linux]
+[2017.02.01-22.03.37:187][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Linux]
+[2017.02.01-22.03.37:198][  0]LogInit: Linux hardware info:
+[2017.02.01-22.03.37:198][  0]LogInit:  - we are the first instance of this executable
+[2017.02.01-22.03.37:198][  0]LogInit:  - this process' id (pid) is 25594, parent process' id (ppid) is 1339
+[2017.02.01-22.03.37:198][  0]LogInit:  - we are not running under debugger
+[2017.02.01-22.03.37:198][  0]LogInit:  - machine network name is 'bm199305-ThinkPad-E560'
+[2017.02.01-22.03.37:198][  0]LogInit:  - user name is 'bm199305' (bm199305)
+[2017.02.01-22.03.37:198][  0]LogInit:  - we're logged in locally
+[2017.02.01-22.03.37:198][  0]LogInit:  - CPU: GenuineIntel 'Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz' (signature: 0x406E3)
+[2017.02.01-22.03.37:198][  0]LogInit:  - Number of physical cores available for the process: 2
+[2017.02.01-22.03.37:198][  0]LogInit:  - Number of logical cores available for the process: 4
+[2017.02.01-22.03.37:198][  0]LogInit:  - Cache line size: 64
+[2017.02.01-22.03.37:198][  0]LogInit:  - Memory allocator used: jemalloc
+[2017.02.01-22.03.37:198][  0]LogLinux: Benchmarking clocks
+[2017.02.01-22.03.37:298][  0]LogLinux:  - CLOCK_REALTIME (id=0) can sustain 43095149 (43095K, 43M) calls per second without zero deltas
+[2017.02.01-22.03.37:398][  0]LogLinux:  - CLOCK_MONOTONIC (id=1) can sustain 44841348 (44841K, 45M) calls per second without zero deltas
+[2017.02.01-22.03.37:499][  0]LogLinux:  - CLOCK_MONOTONIC_RAW (id=4) can sustain 10582546 (10583K, 11M) calls per second without zero deltas
+[2017.02.01-22.03.37:595][  0]LogLinux:  - CLOCK_MONOTONIC_COARSE (id=6) can sustain 154603288 (154603K, 155M) calls per second with 99.999832% zero deltas
+[2017.02.01-22.03.37:595][  0]LogInit: Linux-specific commandline switches:
+[2017.02.01-22.03.37:595][  0]LogInit:  -nodwarf (currently OFF): suppress parsing of DWARF debug info (callstacks will be generated faster, but won't have line numbers)
+[2017.02.01-22.03.37:595][  0]LogInit:  -ansimalloc - use malloc()/free() from libc (useful for tools like valgrind and electric fence)
+[2017.02.01-22.03.37:595][  0]LogInit:  -jemalloc - use jemalloc for all memory allocation
+[2017.02.01-22.03.37:595][  0]LogInit:  -binnedmalloc - use binned malloc  for all memory allocation
+[2017.02.01-22.03.37:595][  0]LogInit:  -httpproxy=ADDRESS:PORT - redirects HTTP requests to a proxy (only supported if compiled with libcurl)
+[2017.02.01-22.03.37:595][  0]LogInit:  -reuseconn - allow libcurl to reuse HTTP connections (only matters if compiled with libcurl)
+[2017.02.01-22.03.37:595][  0]LogInit:  -virtmemkb=NUMBER - sets process virtual memory (address space) limit (overrides VirtualMemoryLimitInKB value from .ini)
+[2017.02.01-22.03.37:595][  0]LogInit:  - Physical RAM available (not considering process quota): 8 GB (7462 MB, 7641400 KB, 7824793600 bytes)
+[2017.02.01-22.03.37:606][  0]LogTextLocalizationManager: No specific translations for ('en-GB') exist, so ('en') translations will be used.
+[2017.02.01-22.03.38:134][  0]LogRHI: Initializing OpenGL RHI
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_VENDOR: Intel Open Source Technology Center
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_RENDERER: Mesa DRI Intel(R) HD Graphics 520 (Skylake GT2) 
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_VERSION: 3.3 (Core Profile) Mesa 11.2.0
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_SHADING_LANGUAGE_VERSION: 3.30
+[2017.02.01-22.03.38:134][  0]LogRHI: OpenGL Extensions:
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_3DFX_texture_compression_FXT1
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_AMD_conservative_depth
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_AMD_draw_buffers_blend
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_AMD_seamless_cubemap_per_texture
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_AMD_shader_stencil_export
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_AMD_shader_trinary_minmax
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_AMD_vertex_shader_layer
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_AMD_vertex_shader_viewport_index
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ANGLE_texture_compression_dxt3
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ANGLE_texture_compression_dxt5
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_APPLE_object_purgeable
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_ES2_compatibility
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_ES3_compatibility
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_arrays_of_arrays
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_base_instance
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_blend_func_extended
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_buffer_storage
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_clear_buffer_object
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_clear_texture
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_clip_control
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_compressed_texture_pixel_storage
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_conditional_render_inverted
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_conservative_depth
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_copy_buffer
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_copy_image
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_debug_output
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_depth_buffer_float
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_depth_clamp
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_derivative_control
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_direct_state_access
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_draw_buffers
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_draw_buffers_blend
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_draw_elements_base_vertex
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_draw_indirect
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_draw_instanced
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_explicit_attrib_location
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_explicit_uniform_location
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_fragment_coord_conventions
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_fragment_layer_viewport
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_fragment_shader
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_framebuffer_no_attachments
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_framebuffer_object
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_framebuffer_sRGB
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_get_program_binary
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_get_texture_sub_image
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_gpu_shader5
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_half_float_pixel
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_half_float_vertex
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_instanced_arrays
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_internalformat_query
+[2017.02.01-22.03.38:134][  0]LogRHI:   GL_ARB_invalidate_subdata
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_map_buffer_alignment
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_map_buffer_range
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_multi_bind
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_multi_draw_indirect
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_occlusion_query2
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_pipeline_statistics_query
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_pixel_buffer_object
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_point_sprite
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_program_interface_query
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_provoking_vertex
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_robustness
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_sample_shading
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_sampler_objects
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_seamless_cube_map
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_seamless_cubemap_per_texture
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_separate_shader_objects
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_atomic_counters
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_bit_encoding
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_clock
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_draw_parameters
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_image_load_store
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_image_size
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_objects
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_stencil_export
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_storage_buffer_object
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_subroutine
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_texture_image_samples
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shader_texture_lod
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shading_language_420pack
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_shading_language_packing
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_stencil_texturing
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_sync
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_tessellation_shader
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_barrier
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_buffer_object
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_buffer_object_rgb32
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_buffer_range
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_compression_bptc
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_compression_rgtc
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_cube_map_array
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_float
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_gather
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_mirror_clamp_to_edge
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_multisample
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_non_power_of_two
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_query_levels
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_query_lod
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_rectangle
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_rg
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_rgb10_a2ui
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_storage
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_storage_multisample
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_swizzle
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_texture_view
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_timer_query
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_transform_feedback2
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_transform_feedback3
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_transform_feedback_instanced
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_uniform_buffer_object
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_vertex_array_bgra
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_vertex_array_object
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_vertex_attrib_binding
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_vertex_shader
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_vertex_type_10f_11f_11f_rev
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_vertex_type_2_10_10_10_rev
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ARB_viewport_array
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ATI_blend_equation_separate
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_ATI_texture_float
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_abgr
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_blend_equation_separate
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_draw_buffers2
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_draw_instanced
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_framebuffer_blit
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_framebuffer_multisample
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_framebuffer_multisample_blit_scaled
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_framebuffer_sRGB
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_packed_depth_stencil
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_packed_float
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_pixel_buffer_object
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_polygon_offset_clamp
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_provoking_vertex
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_shader_integer_mix
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_shader_samples_identical
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_texture_array
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_texture_compression_dxt1
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_texture_compression_rgtc
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_texture_compression_s3tc
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_texture_filter_anisotropic
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_texture_integer
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_texture_sRGB
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_texture_sRGB_decode
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_texture_shared_exponent
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_texture_snorm
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_texture_swizzle
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_timer_query
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_transform_feedback
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_EXT_vertex_array_bgra
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_IBM_multimode_draw_arrays
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_KHR_context_flush_control
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_KHR_debug
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_KHR_texture_compression_astc_hdr
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_KHR_texture_compression_astc_ldr
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_MESA_pack_invert
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_MESA_texture_signed_rgba
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_NV_conditional_render
+[2017.02.01-22.03.38:135][  0]LogRHI:   GL_NV_depth_clamp
+[2017.02.01-22.03.38:136][  0]LogRHI:   GL_NV_packed_depth_stencil
+[2017.02.01-22.03.38:136][  0]LogRHI:   GL_NV_texture_barrier
+[2017.02.01-22.03.38:136][  0]LogRHI:   GL_OES_EGL_image
+[2017.02.01-22.03.38:136][  0]LogRHI:   GL_OES_read_format
+[2017.02.01-22.03.38:136][  0]LogRHI:   GL_S3_s3tc
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_TEXTURE_SIZE: 8192
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_CUBE_MAP_TEXTURE_SIZE: 8192
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_ARRAY_TEXTURE_LAYERS: 2048
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_3D_TEXTURE_SIZE: 2048
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_RENDERBUFFER_SIZE: 8192
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_TEXTURE_IMAGE_UNITS: 32
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_DRAW_BUFFERS: 8
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_COLOR_ATTACHMENTS: 8
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_SAMPLES: 16
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_COLOR_TEXTURE_SAMPLES: 16
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_DEPTH_TEXTURE_SAMPLES: 16
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_INTEGER_SAMPLES: 16
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS: 160
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_VERTEX_ATTRIBS: 16
+[2017.02.01-22.03.38:137][  0]LogRHI:   GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT: 16
+[2017.02.01-22.03.38:137][  0]LogRHI: OpenGL MajorVersion = 3, MinorVersion = 3, ShaderPlatform = GLSL_150, FeatureLevel = SM4
+[2017.02.01-22.03.38:155][  0]LogShaderCompilers: Guid format shader working directory is 14 characters bigger than the processId version (../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Intermediate/Shaders/WorkingDirectory/25594/).
+[2017.02.01-22.03.38:156][  0]LogShaderCompilers: Cleaned the shader compiler working directory '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Intermediate/Shaders/tmp/000396E4260216010003009B11859A71/'.
+[2017.02.01-22.03.38:156][  0]LogShaderCompilers:Display: Using Local Shader Compiler.
+[2017.02.01-22.03.40:028][  0]LogHAL: FLinuxPlatformProcess::CreateProc: '/usr/bin/mono "/home/bm199305/Git/UnrealEngine/Engine/Binaries/DotNET/UnrealBuildTool.exe" -validateplatform -allplatforms'
+[2017.02.01-22.03.40:032][  0]LogHAL: FLinuxPlatformProcess::CreateProc: spawned child 25611
+[2017.02.01-22.03.41:143][  0]LogHAL: Child 25611 is no longer running (zombie), Wait()ing immediately.
+[2017.02.01-22.03.41:143][  0]LogHAL: Child 25611's return code is 0.
+[2017.02.01-22.03.41:143][  0]LogTemp:Display: Loaded TP AllDesktopTargetPlatform
+[2017.02.01-22.03.41:678][  0]LogTemp:Display: Failed to get target platform HTML5TargetPlatform
+[2017.02.01-22.03.42:239][  0]LogTemp:Display: Loaded TP LinuxServerTargetPlatform
+[2017.02.01-22.03.42:797][  0]LogTemp:Display: Loaded TP LinuxNoEditorTargetPlatform
+[2017.02.01-22.03.43:365][  0]LogTemp:Display: Loaded TP LinuxTargetPlatform
+[2017.02.01-22.03.43:365][  0]LogTargetPlatformManager:Display: Building Assets For Linux
+[2017.02.01-22.03.44:437][  0]LogDerivedDataCache:Display: Max Cache Size: 512 MB
+[2017.02.01-22.03.44:577][  0]LogDerivedDataCache: Loaded boot cache 0.14s 80MB ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/DerivedDataCache/Boot.ddc.
+[2017.02.01-22.03.44:577][  0]LogDerivedDataCache:Display: Loaded Boot cache: ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/DerivedDataCache/Boot.ddc
+[2017.02.01-22.03.44:578][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2017.02.01-22.03.44:579][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2017.02.01-22.03.44:579][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnginePak pak cache file ../../../Engine/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2017.02.01-22.03.44:579][  0]LogDerivedDataCache: Unable to find inner node EnginePak for hierarchical cache Hierarchy.
+[2017.02.01-22.03.44:581][  0]LogDerivedDataCache: Using Local data cache path ../../../Engine/DerivedDataCache: Writable
+[2017.02.01-22.03.44:581][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2017.02.01-22.03.44:581][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2017.02.01-22.03.44:815][  0]LogLinux: Selected Device Profile: [Linux]
+[2017.02.01-22.03.45:457][  0]LogMeshUtilities: No automatic mesh reduction module available
+[2017.02.01-22.03.45:457][  0]LogMeshUtilities: No automatic mesh merging module available
+[2017.02.01-22.03.45:457][  0]LogMeshUtilities: No distributed automatic mesh merging module available
+[2017.02.01-22.03.45:983][  0]LogContentStreaming: Texture pool size is 0.00 MB
+[2017.02.01-22.03.47:065][  0]LogHAL: Linux SourceCodeAccessSettings: NullSourceCodeAccessor
+[2017.02.01-22.03.47:067][  0]LogAssetRegistry: FAssetRegistry took 0.0010 seconds to start up
+[2017.02.01-22.03.47:142][  0]LogPackageLocalizationCache: Processed 3 localized package path(s) for 2 prioritized culture(s) in 0.019000 seconds
+[2017.02.01-22.03.47:150][  0]LogUObjectArray: 29872 objects as part of root set at end of initial load.
+[2017.02.01-22.03.47:150][  0]LogUObjectAllocator: 6060664 out of 0 bytes used by permanent object pool.
+[2017.02.01-22.03.47:150][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2017.02.01-22.03.55:884][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 0
+[2017.02.01-22.03.55:884][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 0
+[2017.02.01-22.03.57:970][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2017.02.01-22.04.07:254][  0]SourceControl: Info Source control is disabled
+[2017.02.01-22.04.07:254][  0]LogHAL: FLinuxPlatformProcess::CreateProc: '/usr/bin/git version'
+[2017.02.01-22.04.07:263][  0]LogHAL: FLinuxPlatformProcess::CreateProc: spawned child 25650
+[2017.02.01-22.04.07:271][  0]LogHAL: Child 25650 is no longer running (zombie), Wait()ing immediately.
+[2017.02.01-22.04.07:271][  0]LogHAL: Child 25650's return code is 0.
+[2017.02.01-22.04.07:771][  0]SourceControl: Info Source control is disabled
+[2017.02.01-22.04.08:296][  0]LogDesktopPlatform: DesktopPlatformLinux is not using LinuxNativeDialogs.
+[2017.02.01-22.04.08:738][  0]SourceControl: Info Source control is disabled
+[2017.02.01-22.04.09:175][  0]SourceControl: Info Source control is disabled
+[2017.02.01-22.04.13:380][  0]LogEngine: Initializing Engine...
+[2017.02.01-22.04.15:066][  0]LogAIModule: Creating AISystem for world NewWorld
+[2017.02.01-22.04.15:074][  0]LogALAudio: ALAudio device opened : OpenAL Soft
+[2017.02.01-22.04.15:075][  0]LogALAudio: AL_VENDOR      : OpenAL Community
+[2017.02.01-22.04.15:075][  0]LogALAudio: AL_RENDERER    : OpenAL Soft
+[2017.02.01-22.04.15:075][  0]LogALAudio: AL_VERSION     : 1.1 ALSOFT 1.15.1
+[2017.02.01-22.04.15:075][  0]LogALAudio: AL_EXTENSIONS  : AL_EXT_ALAW AL_EXT_DOUBLE AL_EXT_EXPONENT_DISTANCE AL_EXT_FLOAT32 AL_EXT_IMA4 AL_EXT_LINEAR_DISTANCE AL_EXT_MCFORMATS AL_EXT_MULAW AL_EXT_MULAW_MCFORMATS AL_EXT_OFFSET AL_EXT_source_distance_model AL_LOKI_quadriphonic AL_SOFT_buffer_samples AL_SOFT_buffer_sub_data AL_SOFTX_deferred_updates AL_SOFT_direct_channels AL_SOFT_loop_points AL_SOFT_source_latency
+[2017.02.01-22.04.15:075][  0]LogInit: FAudioDevice initialized.
+[2017.02.01-22.04.15:139][  0]LogDerivedDataCache: Saved boot cache 0.06s 80MB ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/DerivedDataCache/Boot.ddc.
+[2017.02.01-22.04.15:189][  0]LogInit: Texture streaming: Enabled
+[2017.02.01-22.04.17:306][  0]LogInit: Transaction tracking system initialized
+[2017.02.01-22.04.21:200][  0]BlueprintLog: New page: Editor Load
+[2017.02.01-22.04.30:704][  0]LocalizationService: Info Localization service is disabled
+[2017.02.01-22.04.35:547][  0]LogConsoleResponse:Display: 
+[2017.02.01-22.04.36:097][  0]LogFileCache: Scanning file cache for directory '/home/bm199305/Git/Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/' took 0.00s
+[2017.02.01-22.04.36:097][  0]LogCook:Display: Max memory allowance for cook 8192mb
+[2017.02.01-22.04.36:097][  0]LogCook:Display: Mobile HDR setting 1
+[2017.02.01-22.04.44:134][  0]SourceControl: Info Source control is disabled
+[2017.02.01-22.04.44:134][  0]Cmd: MAP LOAD FILE="../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Maps/FirstPersonExampleMap.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=2
+[2017.02.01-22.04.44:135][  0]LightingResults: New page: Lighting Build
+[2017.02.01-22.04.44:638][  0]MapCheck: New page: Map Check
+[2017.02.01-22.04.44:638][  0]LightingResults: New page: Lighting Build
+[2017.02.01-22.04.46:275][  0]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2017.02.01-22.04.46:295][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2017.02.01-22.04.46:296][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2017.02.01-22.04.46:314][  0]MapCheck: Info Map check complete: 0 Error(s), 0 Warning(s), took 18.22ms to complete.
+[2017.02.01-22.04.46:314][  0]LogFileHelpers: Loading map 'FirstPersonExampleMap' took 2.180
+[2017.02.01-22.04.47:368][  0]LogCollectionManager: Loaded 0 collections in 0.000918 seconds
+[2017.02.01-22.04.47:382][  0]LogFileCache: Scanning file cache for directory '/home/bm199305/Git/Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/Collections/' took 0.00s
+[2017.02.01-22.04.47:382][  0]LogFileCache: Scanning file cache for directory '/home/bm199305/Git/Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/Developers/bm199305/Collections/' took 0.00s
+[2017.02.01-22.04.47:382][  0]LogFileCache: Scanning file cache for directory '/home/bm199305/Git/Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/Collections/' took 0.00s
+[2017.02.01-22.04.47:382][  0]LogContentBrowser: Native class hierarchy populated in 0.0112 seconds. Added 2043 classes and 363 folders.
+[2017.02.01-22.04.47:384][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000002 seconds
+[2017.02.01-22.04.48:404][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2017.02.01-22.04.48:404][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2017.02.01-22.04.48:405][  0]LogContentBrowser: Native class hierarchy updated for 'GameplayTags' in 0.0005 seconds. Added 12 classes and 0 folders.
+[2017.02.01-22.04.48:918][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2017.02.01-22.04.51:643][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0015 seconds. Added 0 classes and 0 folders.
+[2017.02.01-22.04.52:132][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0005 seconds. Added 1 classes and 0 folders.
+[2017.02.01-22.04.52:599][  0]LogCrashTracker: Crashtracker disabled due to settings.
+[2017.02.01-22.04.52:609][  0]LogUObjectGlobals:Warning: Failed to find object 'Class None.'
+[2017.02.01-22.04.53:083][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0005 seconds. Added 1 classes and 0 folders.
+[2017.02.01-22.04.53:084][  0]LogLoad: Full Startup: 80.81 seconds (BP compile: 0.34 seconds)
+[2017.02.01-22.04.53:084][  0]LogExternalProfiler: No external profilers were discovered.  External profiling features will not be available.
+[2017.02.01-22.04.53:656][  0]LogRenderer: Reallocating scene render targets to support 1120x556 (Frame:2).
+[2017.02.01-22.04.55:857][  0]LogContentStreaming: Texture pool size now 400 MB
+[2017.02.01-22.04.56:226][  2]LogAssetRegistry: Asset discovery search completed in 69.1591 seconds
+[2017.02.01-22.04.56:227][  2]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2017.02.01-22.04.56:227][  2]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000069 seconds (updated 0 objects)
+[2017.02.01-22.12.29:342][605]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0032 seconds. Added 111 classes and 0 folders.
+[2017.02.01-22.17.51:283][187]LogRenderer: Reallocating scene render targets to support 1128x568 (Frame:1457).
+[2017.02.01-22.17.52:292][187]LogRenderer: Reallocating scene render targets to support 1168x584 (Frame:1458).
+[2017.02.01-22.25.24:091][531]BlueprintLog: New page: Compile FirstPersonCharacter
+[2017.02.01-22.25.25:837][531]BlueprintEditorCompileResults: Info [1313.55] Compile of FirstPersonCharacter successful! [in 1,745 ms] (/Game/FirstPersonBP/Blueprints/FirstPersonCharacter.FirstPersonCharacter)
+[2017.02.01-22.27.17:543][370]LogSavePackage: Save=30721.33ms
+[2017.02.01-22.27.17:543][370]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/FirstPersonExampleMap_Auto1229F67E235021601001A00A664AB8B8E.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/Autosaves/Game/FirstPersonBP/Maps/FirstPersonExampleMap_Auto1.umap'
+[2017.02.01-22.27.17:548][370]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/Autosaves/Game/FirstPersonBP/Maps/FirstPersonExampleMap_Auto1.umap
+[2017.02.01-22.27.17:555][370]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/FirstPersonBP/Maps/FirstPersonExampleMap' took 31.016
+[2017.02.01-22.27.17:555][370]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 31.016
+[2017.02.01-22.30.20:646][ 39]LogTexture:Display: Building textures: BlueprintInterface_64x (BGRA8)
+[2017.02.01-22.31.27:889][730]BlueprintLog: New page: Compile PickupInterface
+[2017.02.01-22.31.28:596][730]BlueprintEditorCompileResults: Info [1676.30] Compile of PickupInterface successful! [in 706 ms] (/Game/FirstPersonBP/Blueprints/Pickups/PickupInterface.PickupInterface)
+[2017.02.01-22.31.30:934][749]LogSavePackage: Save=33.66ms
+[2017.02.01-22.31.30:934][749]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/PickupInterface22C685081E021601001F038475396732.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/PickupInterface.uasset'
+[2017.02.01-22.31.30:939][749]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/PickupInterface.uasset
+[2017.02.01-22.39.12:746][  9]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/FirstPersonBP/Maps/FirstPersonExampleMap' took 0.317
+[2017.02.01-22.39.12:756][  9]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/FirstPersonBP/Blueprints/Pickups/IPickup] ([1] browsable assets)...
+[2017.02.01-22.39.12:756][  9]OBJ SavePackage: Finished generating thumbnails for package [/Game/FirstPersonBP/Blueprints/Pickups/IPickup]
+[2017.02.01-22.39.12:783][  9]LogSavePackage: Save=21.32ms
+[2017.02.01-22.39.12:783][  9]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/IPickup_Auto222E896D40C021601002702FA90C0C7B3.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/Autosaves/Game/FirstPersonBP/Blueprints/Pickups/IPickup_Auto2.uasset'
+[2017.02.01-22.39.12:795][  9]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/Autosaves/Game/FirstPersonBP/Blueprints/Pickups/IPickup_Auto2.uasset
+[2017.02.01-22.39.12:796][  9]LogFileHelpers: Auto-saving content packages took 0.044
+[2017.02.01-22.39.19:982][129]BlueprintLog: New page: Compile IPickup
+[2017.02.01-22.39.20:396][129]BlueprintEditorCompileResults: Info [2148.09] Compile of IPickup successful! [in 413 ms] (/Game/FirstPersonBP/Blueprints/Pickups/IPickup.IPickup)
+[2017.02.01-22.40.15:281][675]BlueprintLog: New page: Compile IPickup
+[2017.02.01-22.40.15:751][675]BlueprintEditorCompileResults: Info [2203.45] Compile of IPickup successful! [in 469 ms] (/Game/FirstPersonBP/Blueprints/Pickups/IPickup.IPickup)
+[2017.02.01-22.40.16:304][681]BlueprintLog: New page: Compile IPickup
+[2017.02.01-22.40.16:782][681]BlueprintEditorCompileResults: Info [2204.48] Compile of IPickup successful! [in 475 ms] (/Game/FirstPersonBP/Blueprints/Pickups/IPickup.IPickup)
+[2017.02.01-22.40.18:219][694]LogSavePackage: Save=26.94ms
+[2017.02.01-22.40.18:219][694]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/IPickup2301773412021601002800C094A71A74.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/IPickup.uasset'
+[2017.02.01-22.40.18:221][694]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/IPickup.uasset
+[2017.02.01-22.40.29:096][778]LogSlate:Warning: Prevented a slow task dialog from being summoned while a context menu was open
+[2017.02.01-22.41.25:716][362]BlueprintLog: New page: Compile AmmoPackPickup
+[2017.02.01-22.41.27:589][362]BlueprintEditorCompileResults: Info [2275.28] Compile of AmmoPackPickup successful! [in 1,870 ms] (/Game/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.AmmoPackPickup)
+[2017.02.01-22.41.30:234][383]LogSavePackage: Save=66.84ms
+[2017.02.01-22.41.30:234][383]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/AmmoPackPickup23819B101E021601002900A798F15CB8.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset'
+[2017.02.01-22.41.30:236][383]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset
+[2017.02.01-22.41.59:194][681]LogSavePackage: Save=43.21ms
+[2017.02.01-22.41.59:195][681]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/AmmoPackPickup238308EF3B021601002900979AAB9ABF.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset'
+[2017.02.01-22.41.59:197][681]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset
+[2017.02.01-22.42.53:766][ 81]BlueprintLog: New page: Compile AmmoPackPickup
+[2017.02.01-22.42.55:781][ 81]BlueprintEditorCompileResults: Info [2363.48] Compile of AmmoPackPickup successful! [in 2,014 ms] (/Game/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.AmmoPackPickup)
+[2017.02.01-22.42.56:128][ 84]BlueprintLog: New page: Compile AmmoPackPickup
+[2017.02.01-22.42.56:627][ 84]BlueprintEditorCompileResults: Info [2364.32] Compile of AmmoPackPickup successful! [in 498 ms] (/Game/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.AmmoPackPickup)
+[2017.02.01-22.43.21:727][193]BlueprintLog: New page: Compile AmmoPackPickup
+[2017.02.01-22.43.22:237][193]BlueprintEditorCompileResults: Info [2389.93] Compile of AmmoPackPickup successful! [in 509 ms] (/Game/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.AmmoPackPickup)
+[2017.02.01-22.43.23:974][204]LogSavePackage: Save=99.63ms
+[2017.02.01-22.43.23:974][204]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/AmmoPackPickup242C4C6F17021601002B036B9FB8589F.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset'
+[2017.02.01-22.43.23:979][204]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset
+[2017.02.01-22.49.37:633][683]LogSavePackage: Save=22752.01ms
+[2017.02.01-22.49.37:633][683]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/FirstPersonExampleMap_Auto32432E20C0F0216010031005BB4A77632.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/Autosaves/Game/FirstPersonBP/Maps/FirstPersonExampleMap_Auto3.umap'
+[2017.02.01-22.49.37:645][683]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/Autosaves/Game/FirstPersonBP/Maps/FirstPersonExampleMap_Auto3.umap
+[2017.02.01-22.49.37:651][683]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/FirstPersonBP/Maps/FirstPersonExampleMap' took 23.021
+[2017.02.01-22.49.37:651][683]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 23.021
+[2017.02.01-23.00.30:650][774]LogEditorViewport: Clicking on Actor (LMB): Brush (Brush)
+[2017.02.01-23.05.17:612][913]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/FirstPersonBP/Maps/FirstPersonExampleMap' took 0.162
+[2017.02.01-23.05.17:622][913]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/FirstPersonBP/Blueprints/Pickups/ICollectable] ([1] browsable assets)...
+[2017.02.01-23.05.17:622][913]OBJ SavePackage: Finished generating thumbnails for package [/Game/FirstPersonBP/Blueprints/Pickups/ICollectable]
+[2017.02.01-23.05.17:649][913]LogSavePackage: Save=18.00ms
+[2017.02.01-23.05.17:649][913]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/ICollectable_Auto424459BE41102170100050277EE062E33.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/Autosaves/Game/FirstPersonBP/Blueprints/Pickups/ICollectable_Auto4.uasset'
+[2017.02.01-23.05.17:652][913]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/Autosaves/Game/FirstPersonBP/Blueprints/Pickups/ICollectable_Auto4.uasset
+[2017.02.01-23.05.17:653][913]LogFileHelpers: Auto-saving content packages took 0.035
+[2017.02.01-23.06.17:884][517]BlueprintLog: New page: Compile ICollectable
+[2017.02.01-23.06.18:265][517]BlueprintEditorCompileResults: Info [3765.92] Compile of ICollectable successful! [in 379 ms] (/Game/FirstPersonBP/Blueprints/Pickups/ICollectable.ICollectable)
+[2017.02.01-23.06.19:734][529]LogSavePackage: Save=37.55ms
+[2017.02.01-23.06.19:734][529]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/ICollectable245814C813021701000602B9F1B928D7.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/ICollectable.uasset'
+[2017.02.01-23.06.19:739][529]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/ICollectable.uasset
+[2017.02.01-23.06.47:754][737]LogSlate:Warning: Prevented a slow task dialog from being summoned while a context menu was open
+[2017.02.01-23.07.02:072][870]BlueprintLog: New page: Compile AmmoPackPickup
+[2017.02.01-23.07.04:473][870]BlueprintEditorCompileResults: Info [3812.13] Compile of AmmoPackPickup successful! [in 2,400 ms] (/Game/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.AmmoPackPickup)
+[2017.02.01-23.07.05:295][876]BlueprintLog: New page: Compile AmmoPackPickup
+[2017.02.01-23.07.05:867][876]BlueprintEditorCompileResults: Info [3813.52] Compile of AmmoPackPickup successful! [in 572 ms] (/Game/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.AmmoPackPickup)
+[2017.02.01-23.07.07:225][884]LogSavePackage: Save=114.86ms
+[2017.02.01-23.07.07:225][884]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/AmmoPackPickup24F7720E070217010007006EF48CA611.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset'
+[2017.02.01-23.07.07:229][884]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset
+[2017.02.01-23.09.02:251][ 57]BlueprintLog: New page: Compile AmmoPackPickup
+[2017.02.01-23.09.02:790][ 57]BlueprintEditorCompileResults: Info [3930.44] Compile of AmmoPackPickup successful! [in 537 ms] (/Game/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.AmmoPackPickup)
+[2017.02.01-23.09.04:724][ 69]LogSavePackage: Save=114.61ms
+[2017.02.01-23.09.04:724][ 69]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/AmmoPackPickup258814000402170100090262FB8D7AD3.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset'
+[2017.02.01-23.09.04:728][ 69]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset
+[2017.02.01-23.09.20:579][183]LogSlate:Warning: Prevented a slow task dialog from being summoned while a context menu was open
+[2017.02.01-23.09.27:975][246]BlueprintLog: New page: Compile GemPick
+[2017.02.01-23.09.29:568][246]BlueprintEditorCompileResults: Info [3957.22] Compile of GemPick successful! [in 1,592 ms] (/Game/FirstPersonBP/Blueprints/Pickups/GemPick.GemPick)
+[2017.02.01-23.10.26:308][880]BlueprintLog: New page: Compile GemPick
+[2017.02.01-23.10.26:870][880]BlueprintEditorCompileResults: Info [4014.52] Compile of GemPick successful! [in 561 ms] (/Game/FirstPersonBP/Blueprints/Pickups/GemPick.GemPick)
+[2017.02.01-23.10.31:793][917]LogSavePackage: Save=105.26ms
+[2017.02.01-23.10.31:793][917]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/GemPick2667E8751F021701000A02B000BE2E7A.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/GemPick.uasset'
+[2017.02.01-23.10.31:797][917]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/GemPick.uasset
+[2017.02.01-23.10.41:922][984]LogSlate:Warning: Prevented a slow task dialog from being summoned while a context menu was open
+[2017.02.01-23.11.06:990][263]BlueprintLog: New page: Compile HealthPackPickup
+[2017.02.01-23.11.08:609][263]BlueprintEditorCompileResults: Info [4056.26] Compile of HealthPackPickup successful! [in 1,618 ms] (/Game/FirstPersonBP/Blueprints/Pickups/HealthPackPickup.HealthPackPickup)
+[2017.02.01-23.12.08:877][887]BlueprintLog: New page: Compile HealthPackPickup
+[2017.02.01-23.12.09:552][887]BlueprintEditorCompileResults: Info [4117.20] Compile of HealthPackPickup successful! [in 673 ms] (/Game/FirstPersonBP/Blueprints/Pickups/HealthPackPickup.HealthPackPickup)
+[2017.02.01-23.12.41:281][103]BlueprintLog: New page: Compile FirstPersonCharacter
+[2017.02.01-23.12.42:638][103]BlueprintEditorCompileResults: Info [4150.29] Compile of FirstPersonCharacter successful! [in 1,355 ms] (/Game/FirstPersonBP/Blueprints/FirstPersonCharacter.FirstPersonCharacter)
+[2017.02.01-23.13.28:409][578]BlueprintLog: New page: Compile FirstPersonCharacter
+[2017.02.01-23.13.29:729][578]BlueprintEditorCompileResults: Info [4197.38] Compile of FirstPersonCharacter successful! [in 1,319 ms] (/Game/FirstPersonBP/Blueprints/FirstPersonCharacter.FirstPersonCharacter)
+[2017.02.01-23.13.30:307][582]BlueprintLog: New page: Compile FirstPersonCharacter
+[2017.02.01-23.13.31:629][582]BlueprintEditorCompileResults: Info [4199.28] Compile of FirstPersonCharacter successful! [in 1,320 ms] (/Game/FirstPersonBP/Blueprints/FirstPersonCharacter.FirstPersonCharacter)
+[2017.02.01-23.13.46:925][687]LogSavePackage: Save=616.60ms
+[2017.02.01-23.13.46:926][687]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/FirstPersonCharacter293B93522E021701000D01350C57C10B.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/FirstPersonCharacter.uasset'
+[2017.02.01-23.13.46:933][687]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/FirstPersonCharacter.uasset
+[2017.02.01-23.13.49:382][705]BlueprintLog: New page: Compile FirstPersonCharacter
+[2017.02.01-23.13.50:577][705]BlueprintEditorCompileResults: Info [4218.22] Compile of FirstPersonCharacter successful! [in 1,195 ms] (/Game/FirstPersonBP/Blueprints/FirstPersonCharacter.FirstPersonCharacter)
+[2017.02.01-23.13.51:678][712]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.13.51:678][712]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.02.01-23.13.51:679][712]PIE: New page: PIE session: FirstPersonExampleMap (1 Feb 2017 23:13:51)
+[2017.02.01-23.13.51:712][712]LogPlayLevel: Creating play world package: /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap
+[2017.02.01-23.13.51:895][712]LogPlayLevel: PIE: StaticDuplicateObject took: (0.183085s)
+[2017.02.01-23.13.51:896][712]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2017.02.01-23.13.51:897][712]LogPlayLevel: PIE: World Init took: (0.001083s)
+[2017.02.01-23.13.51:897][712]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap to /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.185457s)
+[2017.02.01-23.13.52:037][712]LogALAudio: ALAudio device opened : OpenAL Soft
+[2017.02.01-23.13.52:042][712]LogALAudio: AL_VENDOR      : OpenAL Community
+[2017.02.01-23.13.52:042][712]LogALAudio: AL_RENDERER    : OpenAL Soft
+[2017.02.01-23.13.52:042][712]LogALAudio: AL_VERSION     : 1.1 ALSOFT 1.15.1
+[2017.02.01-23.13.52:042][712]LogALAudio: AL_EXTENSIONS  : AL_EXT_ALAW AL_EXT_DOUBLE AL_EXT_EXPONENT_DISTANCE AL_EXT_FLOAT32 AL_EXT_IMA4 AL_EXT_LINEAR_DISTANCE AL_EXT_MCFORMATS AL_EXT_MULAW AL_EXT_MULAW_MCFORMATS AL_EXT_OFFSET AL_EXT_source_distance_model AL_LOKI_quadriphonic AL_SOFT_buffer_samples AL_SOFT_buffer_sub_data AL_SOFTX_deferred_updates AL_SOFT_direct_channels AL_SOFT_loop_points AL_SOFT_source_latency
+[2017.02.01-23.13.52:043][712]LogInit: FAudioDevice initialized.
+[2017.02.01-23.13.52:329][712]LogWorld: Game class is 'FirstPersonGameMode_C'
+[2017.02.01-23.13.52:478][712]LogWorld: Bringing World /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 0) at 2017.02.01-23.13.52
+[2017.02.01-23.13.52:486][712]LogWorld: Bringing up level for play took: 0.118482
+[2017.02.01-23.13.54:369][712]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0020 seconds. Added 11 classes and 0 folders.
+[2017.02.01-23.13.54:383][712]PIE: Info Play in editor start time for /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap 2.706
+[2017.02.01-23.13.54:385][712]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.13.56:896][729]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.13.57:210][729]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.13.57:353][729]LogALAudio: Closing ALAudio device : OpenAL Soft
+[2017.02.01-23.14.01:462][757]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.14.01:463][757]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.02.01-23.14.01:464][757]PIE: New page: PIE session: FirstPersonExampleMap (1 Feb 2017 23:14:01)
+[2017.02.01-23.14.01:467][757]LogPlayLevel: Creating play world package: /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap
+[2017.02.01-23.14.01:652][757]LogPlayLevel: PIE: StaticDuplicateObject took: (0.184429s)
+[2017.02.01-23.14.01:655][757]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2017.02.01-23.14.01:655][757]LogPlayLevel: PIE: World Init took: (0.002135s)
+[2017.02.01-23.14.01:655][757]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap to /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.188114s)
+[2017.02.01-23.14.01:830][757]LogALAudio: ALAudio device opened : OpenAL Soft
+[2017.02.01-23.14.01:839][757]LogALAudio: AL_VENDOR      : OpenAL Community
+[2017.02.01-23.14.01:839][757]LogALAudio: AL_RENDERER    : OpenAL Soft
+[2017.02.01-23.14.01:839][757]LogALAudio: AL_VERSION     : 1.1 ALSOFT 1.15.1
+[2017.02.01-23.14.01:839][757]LogALAudio: AL_EXTENSIONS  : AL_EXT_ALAW AL_EXT_DOUBLE AL_EXT_EXPONENT_DISTANCE AL_EXT_FLOAT32 AL_EXT_IMA4 AL_EXT_LINEAR_DISTANCE AL_EXT_MCFORMATS AL_EXT_MULAW AL_EXT_MULAW_MCFORMATS AL_EXT_OFFSET AL_EXT_source_distance_model AL_LOKI_quadriphonic AL_SOFT_buffer_samples AL_SOFT_buffer_sub_data AL_SOFTX_deferred_updates AL_SOFT_direct_channels AL_SOFT_loop_points AL_SOFT_source_latency
+[2017.02.01-23.14.01:840][757]LogInit: FAudioDevice initialized.
+[2017.02.01-23.14.02:073][757]LogWorld: Game class is 'FirstPersonGameMode_C'
+[2017.02.01-23.14.02:195][757]LogWorld: Bringing World /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 0) at 2017.02.01-23.14.02
+[2017.02.01-23.14.02:198][757]LogWorld: Bringing up level for play took: 0.119396
+[2017.02.01-23.14.02:218][757]PIE: Info Play in editor start time for /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap 0.757
+[2017.02.01-23.14.02:219][757]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.14.04:504][783]LogBlueprintUserMessages: [AmmoPackPickup_248] Ammo
+[2017.02.01-23.14.09:614][853]LogBlueprintUserMessages: [HealthPackPickup2_563] Health
+[2017.02.01-23.14.15:329][927]LogBlueprintUserMessages: [GemPick_86] Gem
+[2017.02.01-23.14.36:962][211]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.14.37:088][211]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.14.37:224][211]LogALAudio: Closing ALAudio device : OpenAL Soft
+[2017.02.01-23.15.41:940][675]BlueprintLog: New page: Compile FirstPersonCharacter
+[2017.02.01-23.15.43:304][675]BlueprintEditorCompileResults: Info [4330.95] Compile of FirstPersonCharacter successful! [in 1,363 ms] (/Game/FirstPersonBP/Blueprints/FirstPersonCharacter.FirstPersonCharacter)
+[2017.02.01-23.15.56:947][756]LogSavePackage: Save=770.68ms
+[2017.02.01-23.15.56:948][756]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/FirstPersonCharacter2A816E4238021701000F00B014155BFA.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/FirstPersonCharacter.uasset'
+[2017.02.01-23.15.56:954][756]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/FirstPersonCharacter.uasset
+[2017.02.01-23.16.47:227][112]BlueprintLog: New page: Compile AmmoPackPickup
+[2017.02.01-23.16.47:924][112]BlueprintEditorCompileResults: Info [4395.57] Compile of AmmoPackPickup successful! [in 696 ms] (/Game/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.AmmoPackPickup)
+[2017.02.01-23.16.49:479][119]LogSavePackage: Save=123.57ms
+[2017.02.01-23.16.49:479][119]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/AmmoPackPickup2AC3BFA031021701001001641740CC31.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset'
+[2017.02.01-23.16.49:505][119]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/AmmoPackPickup.uasset
+[2017.02.01-23.17.21:568][342]BlueprintLog: New page: Compile GemPick
+[2017.02.01-23.17.22:151][342]BlueprintEditorCompileResults: Info [4429.79] Compile of GemPick successful! [in 581 ms] (/Game/FirstPersonBP/Blueprints/Pickups/GemPick.GemPick)
+[2017.02.01-23.17.23:560][349]LogSavePackage: Save=140.02ms
+[2017.02.01-23.17.23:560][349]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/GemPick2AE3AB4E17021701001101A419489704.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/GemPick.uasset'
+[2017.02.01-23.17.23:564][349]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/GemPick.uasset
+[2017.02.01-23.17.59:629][599]BlueprintLog: New page: Compile HealthPackPickup
+[2017.02.01-23.18.00:252][599]BlueprintEditorCompileResults: Info [4467.89] Compile of HealthPackPickup successful! [in 622 ms] (/Game/FirstPersonBP/Blueprints/Pickups/HealthPackPickup.HealthPackPickup)
+[2017.02.01-23.18.01:531][605]LogSavePackage: Save=100.15ms
+[2017.02.01-23.18.01:531][605]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/HealthPackPickup2B03F0F401021701001201AF1B8C8A16.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/HealthPackPickup.uasset'
+[2017.02.01-23.18.01:536][605]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Blueprints/Pickups/HealthPackPickup.uasset
+[2017.02.01-23.18.05:535][640]LogEditorViewport: Clicking Background
+[2017.02.01-23.18.07:991][664]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.18.07:992][664]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2017.02.01-23.18.07:993][664]PIE: New page: PIE session: FirstPersonExampleMap (1 Feb 2017 23:18:07)
+[2017.02.01-23.18.07:994][664]LogPlayLevel: Creating play world package: /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap
+[2017.02.01-23.18.08:637][664]LogPlayLevel: PIE: StaticDuplicateObject took: (0.642728s)
+[2017.02.01-23.18.08:638][664]LogAIModule: Creating AISystem for world FirstPersonExampleMap
+[2017.02.01-23.18.08:638][664]LogPlayLevel: PIE: World Init took: (0.001025s)
+[2017.02.01-23.18.08:639][664]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap to /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap (0.644913s)
+[2017.02.01-23.18.08:847][664]LogALAudio: ALAudio device opened : OpenAL Soft
+[2017.02.01-23.18.08:850][664]LogALAudio: AL_VENDOR      : OpenAL Community
+[2017.02.01-23.18.08:850][664]LogALAudio: AL_RENDERER    : OpenAL Soft
+[2017.02.01-23.18.08:850][664]LogALAudio: AL_VERSION     : 1.1 ALSOFT 1.15.1
+[2017.02.01-23.18.08:850][664]LogALAudio: AL_EXTENSIONS  : AL_EXT_ALAW AL_EXT_DOUBLE AL_EXT_EXPONENT_DISTANCE AL_EXT_FLOAT32 AL_EXT_IMA4 AL_EXT_LINEAR_DISTANCE AL_EXT_MCFORMATS AL_EXT_MULAW AL_EXT_MULAW_MCFORMATS AL_EXT_OFFSET AL_EXT_source_distance_model AL_LOKI_quadriphonic AL_SOFT_buffer_samples AL_SOFT_buffer_sub_data AL_SOFTX_deferred_updates AL_SOFT_direct_channels AL_SOFT_loop_points AL_SOFT_source_latency
+[2017.02.01-23.18.08:853][664]LogInit: FAudioDevice initialized.
+[2017.02.01-23.18.09:088][664]LogWorld: Game class is 'FirstPersonGameMode_C'
+[2017.02.01-23.18.09:203][664]LogWorld: Bringing World /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap.FirstPersonExampleMap up for play (max tick rate 0) at 2017.02.01-23.18.09
+[2017.02.01-23.18.09:214][664]LogWorld: Bringing up level for play took: 0.123074
+[2017.02.01-23.18.09:224][664]PIE: Info Play in editor start time for /Game/FirstPersonBP/Maps/UEDPIE_0_FirstPersonExampleMap 1.233
+[2017.02.01-23.18.09:225][664]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.18.15:354][737]LogBlueprintUserMessages: [FirstPersonCharacter_C_1] 19
+[2017.02.01-23.18.16:491][753]LogBlueprintUserMessages: [FirstPersonCharacter_C_1] 18
+[2017.02.01-23.18.23:997][848]LogBlueprintUserMessages: [FirstPersonCharacter_C_1] 47
+[2017.02.01-23.18.24:737][857]LogBlueprintUserMessages: [FirstPersonCharacter_C_1] 46
+[2017.02.01-23.18.25:316][864]LogBlueprintUserMessages: [FirstPersonCharacter_C_1] 45
+[2017.02.01-23.18.28:543][904]LogBlueprintUserMessages: [FirstPersonCharacter_C_1] 1
+[2017.02.01-23.18.29:550][918]LogBlueprintUserMessages: [FirstPersonCharacter_C_1] 2
+[2017.02.01-23.18.35:062][995]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.18.35:141][995]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel' has LevelScriptBlueprint '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap' with GeneratedClass '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap_C' with ClassGeneratedBy '/Game/FirstPersonBP/Maps/FirstPersonExampleMap.FirstPersonExampleMap:PersistentLevel.FirstPersonExampleMap'
+[2017.02.01-23.18.35:295][995]LogALAudio: Closing ALAudio device : OpenAL Soft
+[2017.02.01-23.19.47:781][406]LogSavePackage: Save=24143.69ms
+[2017.02.01-23.19.47:784][406]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/FirstPersonExampleMap_Auto52B1423FC170217010013034920760751.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/Autosaves/Game/FirstPersonBP/Maps/FirstPersonExampleMap_Auto5.umap'
+[2017.02.01-23.19.47:787][406]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/Autosaves/Game/FirstPersonBP/Maps/FirstPersonExampleMap_Auto5.umap
+[2017.02.01-23.19.47:800][406]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/FirstPersonBP/Maps/FirstPersonExampleMap' took 24.430
+[2017.02.01-23.19.47:801][406]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 24.430
+[2017.02.01-23.20.32:685][566]LogSavePackage: Save=23947.07ms
+[2017.02.01-23.20.32:686][566]LogSavePackage: Moving '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Saved/FirstPersonExampleMap2B1CD4FC08021701001403E723270985.tmp' to '../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Maps/FirstPersonExampleMap.umap'
+[2017.02.01-23.20.32:698][566]LogSavePackage:Display: Finished SavePackage ../../../../Unreal-Blueprints-Workshop-Pojects/PickupInterface/Content/FirstPersonBP/Maps/FirstPersonExampleMap.umap
+[2017.02.01-23.20.32:823][566]LogFileHelpers: Saving map 'FirstPersonExampleMap' took 24.590
+[2017.02.01-23.20.33:524][567]Cmd: QUIT_EDITOR
+[2017.02.01-23.20.33:641][567]LogALAudio: Closing ALAudio device : OpenAL Soft
+[2017.02.01-23.20.33:694][567]LogExit: Preparing to exit.
+[2017.02.01-23.20.35:149][567]LogExit: Editor shut down
+[2017.02.01-23.20.35:153][567]LogExit: Transaction tracking system shut down
+[2017.02.01-23.20.36:192][567]LogObj: Freed 0b from 0 cluster array pools.
+[2017.02.01-23.20.36:193][567]LogExit: Object subsystem successfully closed.
+[2017.02.01-23.20.36:614][567]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (184)
+[2017.02.01-23.20.36:614][567]LogModuleManager: Shutting down and abandoning module BlueprintGraph (183)
+[2017.02.01-23.20.36:614][567]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (182)
+[2017.02.01-23.20.36:614][567]LogModuleManager: Shutting down and abandoning module CrashTracker (181)
+[2017.02.01-23.20.36:614][567]LogModuleManager: Shutting down and abandoning module SceneOutliner (180)
+[2017.02.01-23.20.36:614][567]LogModuleManager: Shutting down and abandoning module WidgetCarousel (179)
+[2017.02.01-23.20.36:614][567]LogModuleManager: Shutting down and abandoning module AddContentDialog (178)
+[2017.02.01-23.20.36:621][567]LogModuleManager: Shutting down and abandoning module GameplayTags (177)
+[2017.02.01-23.20.36:621][567]LogModuleManager: Shutting down and abandoning module EditorWidgets (176)
+[2017.02.01-23.20.36:621][567]LogModuleManager: Shutting down and abandoning module CollectionManager (175)
+[2017.02.01-23.20.36:622][567]LogModuleManager: Shutting down and abandoning module StatsViewer (174)
+[2017.02.01-23.20.36:622][567]LogModuleManager: Shutting down and abandoning module FoliageEdit (173)
+[2017.02.01-23.20.36:622][567]LogModuleManager: Shutting down and abandoning module LandscapeEditor (172)
+[2017.02.01-23.20.36:625][567]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (171)
+[2017.02.01-23.20.36:625][567]LogModuleManager: Shutting down and abandoning module ActorPickerMode (170)
+[2017.02.01-23.20.36:625][567]LogModuleManager: Shutting down and abandoning module GeometryMode (169)
+[2017.02.01-23.20.36:625][567]LogModuleManager: Shutting down and abandoning module TextureAlignMode (168)
+[2017.02.01-23.20.36:625][567]LogModuleManager: Shutting down and abandoning module BspMode (167)
+[2017.02.01-23.20.36:625][567]LogModuleManager: Shutting down and abandoning module HardwareSurvey (166)
+[2017.02.01-23.20.36:626][567]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (165)
+[2017.02.01-23.20.36:626][567]LogModuleManager: Shutting down and abandoning module SequenceRecorder (164)
+[2017.02.01-23.20.36:627][567]LogModuleManager: Shutting down and abandoning module AutomationWorker (163)
+[2017.02.01-23.20.36:627][567]LogModuleManager: Shutting down and abandoning module SmartSnapping (162)
+[2017.02.01-23.20.36:628][567]LogModuleManager: Shutting down and abandoning module CharacterAI (161)
+[2017.02.01-23.20.36:628][567]LogModuleManager: Shutting down and abandoning module PlacementMode (160)
+[2017.02.01-23.20.36:630][567]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (159)
+[2017.02.01-23.20.36:632][567]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (158)
+[2017.02.01-23.20.36:633][567]LogModuleManager: Shutting down and abandoning module SessionServices (157)
+[2017.02.01-23.20.36:633][567]LogModuleManager: Shutting down and abandoning module ViewportSnapping (156)
+[2017.02.01-23.20.36:633][567]LogModuleManager: Shutting down and abandoning module LogVisualizer (155)
+[2017.02.01-23.20.36:635][567]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (154)
+[2017.02.01-23.20.36:636][567]LogModuleManager: Shutting down and abandoning module IntroTutorials (153)
+[2017.02.01-23.20.36:636][567]LogModuleManager: Shutting down and abandoning module EditorLiveStreaming (152)
+[2017.02.01-23.20.36:636][567]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (151)
+[2017.02.01-23.20.36:636][567]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (150)
+[2017.02.01-23.20.36:636][567]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (149)
+[2017.02.01-23.20.36:636][567]LogModuleManager: Shutting down and abandoning module MergeActors (148)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module SizeMap (147)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module TreeMap (146)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module ReferenceViewer (145)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module LocalizationService (144)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (143)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module HardwareTargeting (142)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (141)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module UndoHistory (140)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module UserFeedback (139)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module XmlParser (138)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module Blutility (137)
+[2017.02.01-23.20.36:637][567]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (136)
+[2017.02.01-23.20.36:638][567]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (135)
+[2017.02.01-23.20.36:638][567]LogModuleManager: Shutting down and abandoning module InputBindingEditor (134)
+[2017.02.01-23.20.36:638][567]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (133)
+[2017.02.01-23.20.36:638][567]LogModuleManager: Shutting down and abandoning module SettingsEditor (132)
+[2017.02.01-23.20.36:638][567]LogModuleManager: Shutting down and abandoning module ProjectLauncher (131)
+[2017.02.01-23.20.36:638][567]LogModuleManager: Shutting down and abandoning module SessionFrontend (130)
+[2017.02.01-23.20.36:638][567]LogModuleManager: Shutting down and abandoning module ProfilerClient (129)
+[2017.02.01-23.20.36:638][567]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (128)
+[2017.02.01-23.20.36:639][567]LogModuleManager: Shutting down and abandoning module DeviceManager (127)
+[2017.02.01-23.20.36:650][567]LogModuleManager: Shutting down and abandoning module AutomationController (126)
+[2017.02.01-23.20.36:651][567]LogModuleManager: Shutting down and abandoning module AutomationWindow (125)
+[2017.02.01-23.20.36:652][567]LogModuleManager: Shutting down and abandoning module Layers (124)
+[2017.02.01-23.20.36:653][567]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (123)
+[2017.02.01-23.20.36:653][567]LogModuleManager: Shutting down and abandoning module DetailCustomizations (122)
+[2017.02.01-23.20.36:654][567]LogModuleManager: Shutting down and abandoning module PackagesDialog (121)
+[2017.02.01-23.20.36:656][567]LogModuleManager: Shutting down and abandoning module Persona (120)
+[2017.02.01-23.20.36:656][567]LogModuleManager: Shutting down and abandoning module Kismet (119)
+[2017.02.01-23.20.36:657][567]LogModuleManager: Shutting down and abandoning module GraphEditor (118)
+[2017.02.01-23.20.36:657][567]LogModuleManager: Shutting down and abandoning module ClassViewer (117)
+[2017.02.01-23.20.36:668][567]LogModuleManager: Shutting down and abandoning module Toolbox (116)
+[2017.02.01-23.20.36:668][567]LogModuleManager: Shutting down and abandoning module ModuleUI (115)
+[2017.02.01-23.20.36:668][567]LogModuleManager: Shutting down and abandoning module MovieSceneTools (114)
+[2017.02.01-23.20.36:668][567]LogModuleManager: Shutting down and abandoning module OutputLog (113)
+[2017.02.01-23.20.36:668][567]LogModuleManager: Shutting down and abandoning module GammaUI (112)
+[2017.02.01-23.20.36:668][567]LogModuleManager: Shutting down and abandoning module Documentation (111)
+[2017.02.01-23.20.36:670][567]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (110)
+[2017.02.01-23.20.36:670][567]LogModuleManager: Shutting down and abandoning module AnalyticsET (109)
+[2017.02.01-23.20.36:670][567]LogModuleManager: Shutting down and abandoning module Analytics (108)
+[2017.02.01-23.20.36:670][567]LogModuleManager: Shutting down and abandoning module PortalServices (107)
+[2017.02.01-23.20.36:670][567]LogModuleManager: Shutting down and abandoning module PortalRpc (106)
+[2017.02.01-23.20.36:670][567]LogModuleManager: Shutting down and abandoning module MessagingRpc (105)
+[2017.02.01-23.20.36:670][567]LogModuleManager: Shutting down and abandoning module GameplayDebugger (104)
+[2017.02.01-23.20.36:671][567]LogModuleManager: Shutting down and abandoning module AITestSuite (103)
+[2017.02.01-23.20.36:671][567]LogModuleManager: Shutting down and abandoning module AIModule (102)
+[2017.02.01-23.20.36:671][567]LogModuleManager: Shutting down and abandoning module ProfilerService (101)
+[2017.02.01-23.20.36:790][567]LogModuleManager: Shutting down and abandoning module TaskGraph (100)
+[2017.02.01-23.20.36:792][567]LogModuleManager: Shutting down and abandoning module EpicSurvey (99)
+[2017.02.01-23.20.36:793][567]LogModuleManager: Shutting down and abandoning module PluginBrowser (98)
+[2017.02.01-23.20.36:793][567]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (97)
+[2017.02.01-23.20.36:793][567]LogModuleManager: Shutting down and abandoning module SuperSearch (96)
+[2017.02.01-23.20.36:793][567]LogModuleManager: Shutting down and abandoning module SuperSearchEditor (95)
+[2017.02.01-23.20.36:794][567]LogModuleManager: Shutting down and abandoning module UObjectPlugin (94)
+[2017.02.01-23.20.36:794][567]LogModuleManager: Shutting down and abandoning module CodeLiteSourceCodeAccess (93)
+[2017.02.01-23.20.36:794][567]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (92)
+[2017.02.01-23.20.36:794][567]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (91)
+[2017.02.01-23.20.36:795][567]LogModuleManager: Shutting down and abandoning module DesktopPlatform (90)
+[2017.02.01-23.20.36:795][567]LogModuleManager: Shutting down and abandoning module KDevelopSourceCodeAccess (89)
+[2017.02.01-23.20.36:795][567]LogModuleManager: Shutting down and abandoning module SourceControl (88)
+[2017.02.01-23.20.36:795][567]LogModuleManager: Shutting down and abandoning module GitSourceControl (87)
+[2017.02.01-23.20.36:797][567]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (86)
+[2017.02.01-23.20.36:797][567]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (85)
+[2017.02.01-23.20.36:798][567]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (84)
+[2017.02.01-23.20.36:798][567]LogModuleManager: Shutting down and abandoning module MeshPaint (83)
+[2017.02.01-23.20.36:798][567]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (82)
+[2017.02.01-23.20.36:798][567]LogModuleManager: Shutting down and abandoning module HotReload (81)
+[2017.02.01-23.20.36:800][567]LogModuleManager: Shutting down and abandoning module MainFrame (80)
+[2017.02.01-23.20.36:801][567]LogModuleManager: Shutting down and abandoning module LevelEditor (79)
+[2017.02.01-23.20.36:857][567]LogModuleManager: Shutting down and abandoning module ContentBrowser (78)
+[2017.02.01-23.20.36:876][567]LogModuleManager: Shutting down and abandoning module Paper2DEditor (77)
+[2017.02.01-23.20.36:876][567]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (76)
+[2017.02.01-23.20.36:876][567]LogModuleManager: Shutting down and abandoning module SlateRemote (75)
+[2017.02.01-23.20.36:877][567]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (74)
+[2017.02.01-23.20.36:877][567]LogModuleManager: Shutting down and abandoning module CableComponent (73)
+[2017.02.01-23.20.36:877][567]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (72)
+[2017.02.01-23.20.36:877][567]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (71)
+[2017.02.01-23.20.36:877][567]LogModuleManager: Shutting down and abandoning module UdpMessaging (70)
+[2017.02.01-23.20.36:977][567]LogModuleManager: Shutting down and abandoning module NullSourceCodeAccess (69)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (68)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module Paper2D (67)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module MediaAssets (66)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module GameLiveStreaming (65)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (64)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (63)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module VREditor (62)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (61)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module PropertyEditor (60)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (59)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module FunctionalTesting (58)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (57)
+[2017.02.01-23.20.36:978][567]LogModuleManager: Shutting down and abandoning module Sequencer (56)
+[2017.02.01-23.20.36:979][567]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (55)
+[2017.02.01-23.20.36:979][567]LogModuleManager: Shutting down and abandoning module MessageLog (54)
+[2017.02.01-23.20.36:979][567]LogModuleManager: Shutting down and abandoning module AssetTools (53)
+[2017.02.01-23.20.36:979][567]LogModuleManager: Shutting down and abandoning module UMGEditor (52)
+[2017.02.01-23.20.36:979][567]LogModuleManager: Shutting down and abandoning module UMG (51)
+[2017.02.01-23.20.36:979][567]LogModuleManager: Shutting down and abandoning module SlateReflector (50)
+[2017.02.01-23.20.36:979][567]LogModuleManager: Shutting down and abandoning module Slate (49)
+[2017.02.01-23.20.36:979][567]LogModuleManager: Shutting down and abandoning module EditorStyle (48)
+[2017.02.01-23.20.36:990][567]LogModuleManager: Shutting down and abandoning module Messaging (47)
+[2017.02.01-23.20.36:990][567]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (46)
+[2017.02.01-23.20.36:990][567]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (45)
+[2017.02.01-23.20.36:990][567]LogModuleManager: Shutting down and abandoning module ALAudio (44)
+[2017.02.01-23.20.36:990][567]LogModuleManager: Shutting down and abandoning module Networking (42)
+[2017.02.01-23.20.36:990][567]LogModuleManager: Shutting down and abandoning module Core (41)
+[2017.02.01-23.20.36:991][567]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (40)
+[2017.02.01-23.20.37:008][567]LogModuleManager: Shutting down and abandoning module AssetRegistry (39)
+[2017.02.01-23.20.37:566][567]LogModuleManager: Shutting down and abandoning module KismetCompiler (38)
+[2017.02.01-23.20.37:566][567]LogModuleManager: Shutting down and abandoning module PhysXFormats (37)
+[2017.02.01-23.20.37:566][567]LogModuleManager: Shutting down and abandoning module MeshUtilities (36)
+[2017.02.01-23.20.37:579][567]LogModuleManager: Shutting down and abandoning module DerivedDataCache (35)
+[2017.02.01-23.20.37:664][567]LogDerivedDataCache: Shutdown
+[2017.02.01-23.20.37:664][567]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (34)
+[2017.02.01-23.20.37:664][567]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (33)
+[2017.02.01-23.20.37:664][567]LogModuleManager: Shutting down and abandoning module ImageWrapper (32)
+[2017.02.01-23.20.37:664][567]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (31)
+[2017.02.01-23.20.37:665][567]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (30)
+[2017.02.01-23.20.37:665][567]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (29)
+[2017.02.01-23.20.37:665][567]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (28)
+[2017.02.01-23.20.37:665][567]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (27)
+[2017.02.01-23.20.37:665][567]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (26)
+[2017.02.01-23.20.37:665][567]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (25)
+[2017.02.01-23.20.37:665][567]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (24)
+[2017.02.01-23.20.37:665][567]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (23)
+[2017.02.01-23.20.37:665][567]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (22)
+[2017.02.01-23.20.37:665][567]LogModuleManager: Shutting down and abandoning module TargetPlatform (21)
+[2017.02.01-23.20.37:665][567]LogModuleManager: Shutting down and abandoning module InputCore (20)
+[2017.02.01-23.20.37:666][567]LogModuleManager: Shutting down and abandoning module Settings (19)
+[2017.02.01-23.20.37:667][567]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (17)
+[2017.02.01-23.20.37:667][567]LogModuleManager: Shutting down and abandoning module HTTP (16)
+[2017.02.01-23.20.42:226][567]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (15)
+[2017.02.01-23.20.42:227][567]LogModuleManager: Shutting down and abandoning module LinuxDeviceProfileSelector (14)
+[2017.02.01-23.20.42:227][567]LogModuleManager: Shutting down and abandoning module TextureCompressor (13)
+[2017.02.01-23.20.42:227][567]LogModuleManager: Shutting down and abandoning module ShaderCore (12)
+[2017.02.01-23.20.42:227][567]LogModuleManager: Shutting down and abandoning module Landscape (11)
+[2017.02.01-23.20.42:227][567]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (10)
+[2017.02.01-23.20.42:235][567]LogModuleManager: Shutting down and abandoning module OpenGLDrv (9)
+[2017.02.01-23.20.42:235][567]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (8)
+[2017.02.01-23.20.42:235][567]LogModuleManager: Shutting down and abandoning module Renderer (7)
+[2017.02.01-23.20.42:235][567]LogModuleManager: Shutting down and abandoning module Engine (6)
+[2017.02.01-23.20.42:235][567]LogModuleManager: Shutting down and abandoning module CoreUObject (5)
+[2017.02.01-23.20.42:235][567]LogModuleManager: Shutting down and abandoning module NetworkFile (4)
+[2017.02.01-23.20.42:235][567]LogModuleManager: Shutting down and abandoning module StreamingFile (3)
+[2017.02.01-23.20.42:235][567]LogModuleManager: Shutting down and abandoning module SandboxFile (2)
+[2017.02.01-23.20.42:235][567]LogModuleManager: Shutting down and abandoning module PakFile (1)
+[2017.02.01-23.20.42:237][567]LogExit: Exiting.
+[2017.02.01-23.20.42:237][567]LogInit: Tearing down SDL.
+[2017.02.01-23.20.42:373][567]Log file closed, 02/01/17 23:20:42
